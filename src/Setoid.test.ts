@@ -6,21 +6,17 @@ import {
 } from "./SetoidSpec";
 import { iterLimit, slidingWindow } from "../test/utils";
 
-type Result = {
-  num: number;
-};
-
-class ResultSetoid implements Setoid {
-  constructor(private result: Result) {}
+class Result implements Setoid {
+  constructor(private num: number) {}
 
   equals(a: this): boolean {
-    return this.result.num === a.result.num;
+    return this.num === a.num;
   }
 }
 
-function* setoids(): IterableIterator<ResultSetoid> {
+function* setoids(): IterableIterator<Result> {
   while (1) {
-    yield new ResultSetoid({ num: Math.floor(Math.random() * 5) });
+    yield new Result(Math.floor(Math.random() * 5));
   }
 }
 
