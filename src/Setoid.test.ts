@@ -3,7 +3,7 @@ import {
   testReflexivitySpec,
   testSymmetrySpec,
   testTransitivitySpec
-} from "./specs/Setoid";
+} from "./SetoidSpec";
 import { iterLimit, slidingWindow } from "../test/utils";
 
 type Result = {

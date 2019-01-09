@@ -1,5 +1,5 @@
-import { Setoid } from "../Setoid";
-import { assertOk } from "../../test/utils";
+import { Setoid } from "./Setoid";
+import { assertOk } from "../test/utils";
 
 const assert = assertOk("Setoid");
 
