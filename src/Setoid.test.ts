@@ -1,5 +1,9 @@
 import { Setoid } from "./Setoid";
-import { testReflexivitySpec, testSymmetrySpec, testTransitivitySpec } from "./specs/Setoid";
+import {
+  testReflexivitySpec,
+  testSymmetrySpec,
+  testTransitivitySpec
+} from "./specs/Setoid";
 import { iterLimit, slidingWindow } from "../test/utils";
 
 type Result = {
@@ -12,7 +16,6 @@ class ResultSetoid implements Setoid {
   equals(a: this): boolean {
     return this.result.num === a.result.num;
   }
-
 }
 
 function* setoids(): IterableIterator<ResultSetoid> {

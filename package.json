@@ -5,13 +5,19 @@
   "main": "index.js",
   "scripts": {
     "fmt": "prettier --write '**/*.{ts,js,json}'",
-    "lint": "tslint --project tsconfig.json --fix"
+    "lint": "tslint --project tsconfig.json --fix",
+    "test": "run-s test:*",
+    "test:compile": "tsc --noEmit",
+    "test:fmt": "prettier --list-different '**/*.{ts,js,json}'",
+    "test:lint": "tslint --project tsconfig.json",
+    "test:unit": "jest"
   },
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^23.3.12",
     "jest": "^23.6.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.15.3",
     "ts-jest": "^23.10.5",
     "tslint": "^5.12.0",
