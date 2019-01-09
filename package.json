@@ -1,0 +1,23 @@
+{
+  "name": "tsfl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "fmt": "prettier --write '**/*.{ts,js,json}'",
+    "lint": "tslint --project tsconfig.json --fix"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.15.3",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "ts-node": "^7.0.1"
+  }
+}
